@@ -1,0 +1,74 @@
+{
+  "name": "@peiyanlu/svgconvert",
+  "version": "1.0.0",
+  "description": "svg convert",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.module.js",
+  "exports": {
+    "import": "./lib/index.module.js",
+    "require": "./lib/index.cjs",
+    "default": "./lib/index.module.js"
+  },
+  "types": "./lib/index.d.ts",
+  "author": "YanluPei",
+  "license": "ISC",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "test": "nodemon --exec node --experimental-specifier-resolution=node --loader ts-node/esm test/app.test.ts",
+    "build": "npm run clean && rollup -c rollup.config.js",
+    "clean": "rd /S /Q lib",
+    "release": "npm run build && release-it"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^5.1.1",
+    "@rollup/plugin-commonjs": "^23.0.4",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@types/html-minifier": "^4.0.2",
+    "@types/node": "^18.11.9",
+    "@types/xmldom": "^0.1.31",
+    "esbuild": "^0.16.4",
+    "nodemon": "^2.0.20",
+    "release-it": "^15.5.1",
+    "rollup": "^3.7.3",
+    "rollup-plugin-dts": "^5.0.0",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "juice": "^8.1.0",
+    "svgpath": "^2.6.0",
+    "xmldom": "^0.6.0"
+  },
+  "files": [
+    "lib",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:peiyanlu/svgconvert.git"
+  },
+  "keywords": [
+    "svgconvert",
+    "convert path",
+    "path",
+    "shape2path",
+    "convertShapeToPath"
+  ],
+  "bugs": {
+    "url": "https://github.com/peiyanlu/svgconvert/issues"
+  },
+  "homepage": "https://github.com/peiyanlu/svgconvert#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}

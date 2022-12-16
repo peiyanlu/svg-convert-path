@@ -1,0 +1,6 @@
+# IntelliJ project files
+.idea
+.git
+node_modules
+.npmrc
+
