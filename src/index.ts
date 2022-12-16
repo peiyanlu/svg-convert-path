@@ -8,7 +8,6 @@ import {
   convertUseToGroup,
   removeGradient,
   removeGroups,
-  removeNodesOrAttributes,
   viewBoxTransform,
 } from './plugins'
 
@@ -53,7 +52,6 @@ const pluginList: PluginType = {
   convertTransformForPath,
   removeGradient,
   removeGroups,
-  removeNodesOrAttributes,
   viewBoxTransform,
 }
 

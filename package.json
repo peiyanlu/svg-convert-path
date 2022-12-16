@@ -1,5 +1,5 @@
 {
-  "name": "@peiyanlu/svgconvert",
+  "name": "svg-convert-path",
   "version": "1.0.0",
   "description": "svg convert",
   "main": "./lib/index.cjs",
@@ -16,9 +16,11 @@
   "type": "module",
   "scripts": {
     "test": "nodemon --exec node --experimental-specifier-resolution=node --loader ts-node/esm test/app.test.ts",
-    "build": "npm run clean && rollup -c rollup.config.js",
     "clean": "rd /S /Q lib",
-    "release": "npm run build && release-it"
+    "build": "npm run clean && rollup -c rollup.config.js",
+    "publish": "npm publish --access public",
+    "unpublish": "npm unpublish --force",
+    "release": "release-it"
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "^5.1.1",
@@ -65,9 +67,9 @@
     "convertShapeToPath"
   ],
   "bugs": {
-    "url": "https://github.com/peiyanlu/svgconvert/issues"
+    "url": "https://github.com/peiyanlu/svg-convert-path/issues"
   },
-  "homepage": "https://github.com/peiyanlu/svgconvert#readme",
+  "homepage": "https://github.com/peiyanlu/svg-convert-path#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   }

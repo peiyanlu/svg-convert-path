@@ -1,11 +1,11 @@
-## @peiyanlu/svgconvert [![npm](https://img.shields.io/badge/npm-%40peiyanlu%2Fsvgconvert-brightgreen)](https://www.npmjs.com/package/@peiyanlu/svgconvert)
+## svg-convert-path [![npm](https://img.shields.io/badge/npm-svg--convert--path-brightgreen)](https://www.npmjs.com/package/svg-convert-path)
 
 一个 Node.js 库，用于将 svg 中形状元素转换为路径元素；基于 [convertpath](https://www.npmjs.com/package/convertpath) 开发
 
 ## Install
 
 ```
-npm install @peiyanlu/svgconvert
+npm install svg-convert-path
 ```
 
 ## What it can do
@@ -14,14 +14,13 @@ npm install @peiyanlu/svgconvert
 - convertShapeToPath：转换 shape 元素为 path 元素
 - convertTransformForPath：删除 transform 属性并将数据转换到 path 属性
 - removeGradient：删除通过 url('#id') 引入的渐变
-- removeGroups：删除 g 元素并将 g 元素属性移动到其包含的元素
-- removeNodesOrAttributes：删除部分节点和属性
-- viewBoxTransform：删除 width/height 属性并且重置 viewBox 属性
+- removeGroups：删除 g 元素并将 g 元素属性移动到其包含的元素；**支持参数 NodesOptions | AttributesOptions**
+- viewBoxTransform：删除 width/height 属性并且重置 viewBox 属性；**支持参数 TransformOptions**
 
 ## Usage
 
 ```ts
-import SVGConvert from '@peiyanlu/svgconvert'
+import SVGConvert from 'svg-convert-path'
 
 const parse = SVGConvert.parseFile('test.svg', {
   plugins: [
@@ -30,7 +29,6 @@ const parse = SVGConvert.parseFile('test.svg', {
     'convertTransformForPath',
     'removeGradient',
     'removeGroups',
-    'removeNodesOrAttributes',
     'viewBoxTransform'
   ],
   options: {
@@ -90,7 +88,7 @@ interface ParseConfig {
 
 ## CHANGELOG
 
-[CHANGELOG.md](https://github.com/peiyanlu/svgconvert/blob/master/CHANGELOG.md)
+[CHANGELOG.md](https://github.com/peiyanlu/svg-convert-path/blob/master/CHANGELOG.md)
 
 ## Special thanks
 
