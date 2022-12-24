@@ -21,7 +21,7 @@ const transNode = (Node: HTMLOrSVGImageElement, tranX: number, tranY: number, pe
             .translate(tranX, tranY)
             .scale(percent)
             .rel()
-            .round(2)
+            .round(10)
             .toString(),
         )
       }
@@ -43,7 +43,7 @@ const transNode = (Node: HTMLOrSVGImageElement, tranX: number, tranY: number, pe
  * @param {TransformOptions} options
  */
 export const viewBoxTransform = (document: Document, options?: TransformOptions) => {
-  const { size = 1024, center = false } = options || {}
+  const { size = 1024, center = true } = options || {}
 
   const VIEWBox = size > 0 ? [ 0, 0, size, size ] : [ 0, 0, 1024, 1024 ]
 

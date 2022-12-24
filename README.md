@@ -26,9 +26,9 @@ const parse = SVGConvert.parseFile('test.svg', {
   plugins: [
     'convertUseToGroup',
     'convertShapeToPath',
-    'convertTransformForPath',
     'removeGradient',
     'removeGroups',
+    'convertTransformForPath',
     'viewBoxTransform'
   ],
   options: {
@@ -37,7 +37,7 @@ const parse = SVGConvert.parseFile('test.svg', {
     desc: true,
     style: true,
     fill: true,
-    center: false,
+    center: true,
     size: 1024
   },
 })

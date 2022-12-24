@@ -49,9 +49,9 @@ type PluginType = {
 const pluginList: PluginType = {
   convertUseToGroup,
   convertShapeToPath,
-  convertTransformForPath,
   removeGradient,
   removeGroups,
+  convertTransformForPath,
   viewBoxTransform,
 }
 
@@ -70,7 +70,15 @@ const fixExtraFiled = (document: Document) => {
 
 
 const dispatcher = (document: Document, config?: ParseConfig) => {
-  const { plugins, options } = config!
+  const def = [
+    'convertUseToGroup',
+    'convertShapeToPath',
+    'removeGradient',
+    'removeGroups',
+    'convertTransformForPath',
+    'viewBoxTransform'
+  ]
+  const { plugins = def, options } = config!
 
   if (plugins) {
     const cug = plugins.indexOf(SpecialPlugins.convertUseToGroup)

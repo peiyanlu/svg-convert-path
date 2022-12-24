@@ -1,6 +1,6 @@
 {
   "name": "svg-convert-path",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "svg convert",
   "main": "./lib/index.cjs",
   "module": "./lib/index.module.js",
@@ -18,7 +18,7 @@
     "test": "nodemon --exec node --experimental-specifier-resolution=node --loader ts-node/esm test/app.test.ts",
     "clean": "rd /S /Q lib",
     "build": "npm run clean && rollup -c rollup.config.js",
-    "publish": "npm publish --access public",
+    "pbs": "npm publish --access public",
     "unpublish": "npm unpublish --force",
     "release": "release-it"
   },
@@ -57,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:peiyanlu/svgconvert.git"
+    "url": "git+ssh://git@github.com:peiyanlu/svg-convert-path.git"
   },
   "keywords": [
     "svgconvert",
